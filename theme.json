@@ -181,7 +181,7 @@
 		}
 	},
 	"styles": {
-		"css": ".rounded { border-radius: var(--wp--custom--border--radius); }",
+		"css": ".rounded { border-radius: var(--wp--custom--border--radius); } .p-regular { padding: var(--wp--preset--spacing--small); }",
 		"color": {
 			"background": "var:preset|color|base",
 			"text": "var:preset|color|contrast"
