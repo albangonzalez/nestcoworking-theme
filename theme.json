@@ -173,9 +173,15 @@
 			"radius": true,
 			"style": true,
 			"width": true
+		},
+		"custom": {
+			"border": {
+				"radius": "1.5rem"
+			}
 		}
 	},
 	"styles": {
+		"css": ".rounded { border-radius: var(--wp--custom--border--radius); }",
 		"color": {
 			"background": "var:preset|color|base",
 			"text": "var:preset|color|contrast"
@@ -270,7 +276,7 @@
 				"variations": {
 					"rounded": {
 						"border": {
-							"radius": "1.5rem"
+							"radius": "var:custom|border|radius"
 						}
 					}
 				}
