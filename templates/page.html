@@ -3,11 +3,11 @@
 <!-- wp:group {"tagName":"main"} -->
 <main class="wp-block-group">
 
-	<!-- wp:group -->
+	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"customOverlayColor":"#FFF","contentPosition":"bottom left","isDark":false,"layout":{"type":"constrained"}} -->
-		<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-left">
-			<span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#FFF"></span>
+		<!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"heading","minHeight":600,"contentPosition":"bottom left","isDark":false,"align":"wide","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","className":"rounded","layout":{"type":"constrained"}} -->
+		<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-left is-constrained alignwide has-base-color rounded" style="min-height: 600px;">
+			<span aria-hidden="true" class="wp-block-cover__background has-heading-background-color has-background-dim"></span>
 			<div class="wp-block-cover__inner-container">
 				<!-- wp:post-title {"level":1} /-->
 			</div>
@@ -15,6 +15,10 @@
 		<!-- /wp:cover -->
 	</div>
 	<!-- /wp:group -->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|regular"} -->
+	<div style="height:var(--wp--preset--spacing--regular)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 
 	<!-- wp:post-content {"align":"wide","layout":{"type":"constrained"}} /-->
 
