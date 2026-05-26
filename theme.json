@@ -44,6 +44,16 @@
 					"slug": "surface",
 					"color": "#f3f2ef",
 					"name": "Surface"
+				},
+				{
+					"slug": "indigo",
+					"color": "#372aac",
+					"name": "Blue (Indigo)"
+				},
+				{
+					"slug": "violet",
+					"color": "#4d179a",
+					"name": "Violet"
 				}
 			],
 			"gradients": [
