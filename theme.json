@@ -339,6 +339,13 @@
 						"top": "0rem"
 					}
 				}
+			},
+			"core/separator": {
+				"border": {
+					"color": "var:preset|color|base",
+					"style": "solid",
+					"width": "1px"
+				}
 			}
 		}
 	},
