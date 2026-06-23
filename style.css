@@ -13,3 +13,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: nestcoworking
 Tags:
 */
+
+div.grid-spaces > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1rem .5rem;
+}
+
+div.grid-spaces a.wp-element-button {
+    background: none;
+    font-size: var(--wp--preset--font-size--large);
+    font-weight: 700;
+    letter-spacing: .08;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
