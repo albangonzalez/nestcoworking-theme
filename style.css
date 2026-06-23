@@ -14,6 +14,59 @@ Text Domain: nestcoworking
 Tags:
 */
 
+/* Bento grid – latest 3 posts */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.bento-grid .wp-block-post:first-child {
+    grid-row: span 2;
+}
+
+.bento-grid .wp-block-post {
+    position: relative;
+    overflow: hidden;
+    margin-block-start: 0;
+}
+
+.bento-grid .wp-block-post-featured-image {
+    height: 100%;
+}
+
+.bento-grid .wp-block-post-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bento-grid .wp-block-post-title {
+    font-size: var(--wp--preset--font-size--xl);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 2rem;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65));
+    color: #fff;
+    border-radius: var(--wp--custom--border--radius);
+}
+
+@media (max-width: 640px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bento-grid .wp-block-post:first-child {
+        grid-row: span 1;
+    }
+}
+
 div.grid-spaces > div {
     position: relative;
     display: flex;
