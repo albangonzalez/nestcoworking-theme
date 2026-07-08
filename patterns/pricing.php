@@ -10,7 +10,7 @@
 <!-- wp:group {"align":"full","backgroundColor":"surface-container-low","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-container-low-background-color has-background"><!-- wp:group {"align":"wide","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group alignwide"><!-- wp:heading -->
-<h2 class="wp-block-heading">Tenemos un <span class="has-primary-color">plan</span> para ti, elige el <span class="has-primary-color">tuyo</span></h2>
+<h2 class="wp-block-heading">Tenemos un <em class="has-text-color has-primary-color">plan</em> para ti, elige el <em class="has-text-color has-primary-color">tuyo</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"layout":{"type":"grid","columnCount":4}} -->

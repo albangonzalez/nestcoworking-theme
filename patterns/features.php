@@ -10,14 +10,14 @@
 <!-- wp:group {"align":"full","backgroundColor":"surface-container-low","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-container-low-background-color has-background"><!-- wp:group {"align":"wide","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group alignwide"><!-- wp:heading -->
-<h2 class="wp-block-heading">Todo lo que <span class="has-primary-color">necesitas</span>, donde <span class="has-primary-color">quieres estar</span></h2>
+<h2 class="wp-block-heading">Todo lo que <em class="has-text-color has-primary-color">necesitas</em>, donde <em class="has-text-color has-primary-color">quieres estar</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"layout":{"type":"grid","columnCount":6}} -->
 <div class="wp-block-group"><!-- wp:cover {"url":"/wp-content/themes/nestcoworking/assets/images/best-location.jpg","id":284,"dimRatio":0,"isUserOverlayColor":true,"minHeight":450,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"sizeSlug":"full","className":"rounded","style":{"layout":{"columnSpan":3}},"layout":{"type":"default"}} -->
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center rounded" style="min-height:450px"><img class="wp-block-cover__image-background wp-image-284 size-full" alt="" src="/wp-content/themes/nestcoworking/assets/images/best-location.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"css":"gap: 0;"},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->
 <div class="wp-block-group has-custom-css"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0">En el <span class="has-primary-color">corazón</span> de Playa</h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0">En el <span class="has-text-color has-primary-color">corazón</span> de Playa</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -29,7 +29,7 @@
 <!-- wp:cover {"url":"/wp-content/themes/nestcoworking/assets/images/clock.jpg","id":283,"dimRatio":0,"isUserOverlayColor":true,"minHeight":450,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"sizeSlug":"full","className":"rounded","style":{"layout":{"columnSpan":3,"rowSpan":1}},"layout":{"type":"default"}} -->
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center rounded" style="min-height:450px"><img class="wp-block-cover__image-background wp-image-283 size-full" alt="" src="/wp-content/themes/nestcoworking/assets/images/clock.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"css":"gap: 0;"},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->
 <div class="wp-block-group has-custom-css"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0">Acceso <span class="has-primary-color">24/7</span></h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0">Acceso <span class="has-text-color has-primary-color">24/7</span></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -39,9 +39,9 @@
 <!-- /wp:cover -->
 
 <!-- wp:cover {"url":"/wp-content/themes/nestcoworking/assets/images/snacks.jpg","id":333,"dimRatio":0,"isUserOverlayColor":true,"minHeight":400,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"sizeSlug":"full","className":"rounded","style":{"layout":{"columnSpan":2}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center rounded" style="min-height:400px"><img class="wp-block-cover__image-background wp-image-333 size-full" alt="" src="/wp-content/themes/nestcoworking/assets/images/snacks.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"css":"gap: 0;"},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->
+<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center rounded" style="min-height:400px"><img class"wp-block-cover__image-background wp-image-333 size-full" alt="" src="/wp-content/themes/nestcoworking/assets/images/snacks.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"css":"gap: 0;"},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->
 <div class="wp-block-group has-custom-css"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><span class="has-secondary-color">Cafeteria</span> barista y snacks</h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><span class="has-text-color has-secondary-color">Cafeteria</span> barista y snacks</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -53,7 +53,7 @@
 <!-- wp:cover {"url":"/wp-content/themes/nestcoworking/assets/images/plug-and-play.jpg","id":341,"dimRatio":0,"isUserOverlayColor":true,"minHeight":400,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"sizeSlug":"full","className":"rounded","style":{"layout":{"columnSpan":2}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center rounded" style="min-height:400px"><img class="wp-block-cover__image-background wp-image-341 size-full" alt="" src="/wp-content/themes/nestcoworking/assets/images/plug-and-play.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"css":"gap: 0;"},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->
 <div class="wp-block-group has-custom-css"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><span class="has-indigo-color">Pantallas</span> para trabajar en grande</h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><span class="has-text-color has-indigo-color">Pantallas</span> para trabajar en grande</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -65,7 +65,7 @@
 <!-- wp:cover {"url":"/wp-content/themes/nestcoworking/assets/images/lightning-fast.jpg","id":340,"dimRatio":0,"isUserOverlayColor":true,"minHeight":400,"minHeightUnit":"px","contentPosition":"bottom center","isDark":false,"sizeSlug":"full","className":"rounded","style":{"layout":{"columnSpan":2}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center rounded" style="min-height:400px"><img class="wp-block-cover__image-background wp-image-340 size-full" alt="" src="/wp-content/themes/nestcoworking/assets/images/lightning-fast.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"css":"gap: 0;"},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->
 <div class="wp-block-group has-custom-css"><!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"layout":{"selfStretch":"fit","flexSize":null}}} -->
-<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><span class="has-violet-color">Conexión</span> blindada</h3>
+<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><span class="has-text-color has-violet-color">Conexión</span> blindada</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->

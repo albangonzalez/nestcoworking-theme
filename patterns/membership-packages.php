@@ -10,7 +10,7 @@
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide"><!-- wp:heading -->
-<h2 class="wp-block-heading">Ahorra con <span class="has-primary-color">paquetes</span> de membresías</h2>
+<h2 class="wp-block-heading">Ahorra con <em class="has-text-color has-primary-color">paquetes</em> de membresías</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
