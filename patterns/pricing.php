@@ -20,7 +20,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"typography":{"fontStyle":"normal","fontWeight":"700","fontSize":"1.75rem"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"primary"} -->
-<p class="has-primary-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:1.75rem;font-style:normal;font-weight:700">$180</p>
+<p class="has-primary-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:1.75rem;font-style:normal;font-weight:700">$200</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"list-features","style":{"spacing":{"margin":{"top":"var:preset|spacing|2xs","bottom":"var:preset|spacing|2xs"}}}} -->
