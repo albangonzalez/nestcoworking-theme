@@ -1,0 +1,73 @@
+.wp-block-nestcoworking-modal {
+	display: inline-block;
+}
+
+.wp-block-nestcoworking-modal__trigger {
+	cursor: pointer;
+}
+
+.wp-block-nestcoworking-modal__dialog {
+	max-width: min(90vw, 40rem);
+	width: 100%;
+	max-height: min(85vh, 100%);
+	margin: auto;
+	padding: 0;
+	border: none;
+	border-radius: var(--wp--custom--border--radius);
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+
+	&::backdrop {
+		background-color: rgb(0 0 0 / 55%);
+	}
+
+	&[open] {
+		animation: nestcoworking-modal-in 0.2s ease-out;
+	}
+}
+
+.wp-block-nestcoworking-modal__content {
+	padding: var(--wp--preset--spacing--small);
+	overflow-y: auto;
+}
+
+.wp-block-nestcoworking-modal__close {
+	position: absolute;
+	top: var(--wp--preset--spacing--2-xs);
+	right: var(--wp--preset--spacing--2-xs);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	color: var(--wp--preset--color--contrast);
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--wp--preset--color--light-gray);
+	}
+}
+
+@keyframes nestcoworking-modal-in {
+	from {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-nestcoworking-modal__dialog[open] {
+		animation: none;
+	}
+}

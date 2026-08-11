@@ -1,0 +1,22 @@
+.wp-block-nestcoworking-modal {
+	border: 1px dashed var(--wp--preset--color--light-gray);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--2-xs);
+}
+
+.wp-block-nestcoworking-modal__trigger {
+	display: inline-block;
+	margin-bottom: var(--wp--preset--spacing--2-xs);
+}
+
+.wp-block-nestcoworking-modal__hint {
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--contrast);
+	opacity: 0.7;
+	margin-top: 0;
+}
+
+.wp-block-nestcoworking-modal__content {
+	border-top: 1px solid var(--wp--preset--color--light-gray);
+	padding-top: var(--wp--preset--spacing--2-xs);
+}

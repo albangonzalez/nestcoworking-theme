@@ -1,0 +1,1 @@
+import{getContext as e,getElement as o,store as s}from"@wordpress/interactivity";s("nestcoworking/modal",{actions:{open(){e().isOpen=!0},close(){e().isOpen=!1},handleBackdropClick(s){const{ref:n}=o();s.target===n&&(e().isOpen=!1)}},callbacks:{syncOpenState(){const{ref:s}=o(),{isOpen:n}=e();n&&!s.open?s.showModal():!n&&s.open&&s.close()}}});
