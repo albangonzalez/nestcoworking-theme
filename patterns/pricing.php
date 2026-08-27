@@ -45,11 +45,7 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","verticalAlignment":"top"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"width":100} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button">Comprar en linea</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- wp:nestcoworking/checkout-button {"planId":"4-hours","buttonText":"Comprar en linea"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"p-regular rounded","backgroundColor":"light-gray","layout":{"type":"constrained"}} -->
@@ -93,11 +89,7 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","verticalAlignment":"top"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"width":100} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button">Comprar en linea</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- wp:nestcoworking/checkout-button {"planId":"day-pass","buttonText":"Comprar en linea"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"p-regular rounded","backgroundColor":"light-gray","layout":{"type":"constrained"}} -->
@@ -153,11 +145,7 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","verticalAlignment":"top"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"width":100} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button">Comprar en linea</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- wp:nestcoworking/checkout-button {"planId":"week-pass","buttonText":"Comprar en linea","requiresStartDate":true} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"p-regular rounded","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained"}} -->
@@ -213,12 +201,7 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","verticalAlignment":"top"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"width":100,"className":"is-style-outline"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button">Comprar en linea</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
-<!-- /wp:group --></div>
+<!-- wp:nestcoworking/checkout-button {"planId":"month-pass","buttonText":"Comprar en linea","requiresStartDate":true,"className":"is-style-outline"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

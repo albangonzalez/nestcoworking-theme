@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "nestcoworking/checkout-button",
+  "title": "Mercado Pago Checkout Button",
+  "category": "nestcoworking",
+  "icon": "cart",
+  "description": "A button that creates a Mercado Pago payment preference and redirects to Checkout Pro, optionally asking for a start date first.",
+  "keywords": [
+    "mercado pago",
+    "checkout",
+    "payment",
+    "pricing"
+  ],
+  "textdomain": "nestcoworking",
+  "attributes": {
+    "planId": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Comprar en línea"
+    },
+    "requiresStartDate": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "interactivity": true,
+    "html": false,
+    "align": [
+      "left",
+      "center",
+      "right"
+    ]
+  },
+  "styles": [
+    {
+      "name": "fill",
+      "label": "Fill",
+      "isDefault": true
+    },
+    {
+      "name": "outline",
+      "label": "Outline"
+    }
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,100 @@
+.wp-block-nestcoworking-checkout-button {
+	display: block;
+	width: 100%;
+
+	.wp-block-buttons,
+	.wp-block-button,
+	.wp-block-button__link {
+		width: 100%;
+	}
+}
+
+.wp-block-nestcoworking-checkout-button.is-style-outline .wp-block-button__link {
+	background-color: transparent;
+	color: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--base);
+}
+
+.wp-block-nestcoworking-checkout-button__dialog {
+	max-width: min(90vw, 28rem);
+	width: 100%;
+	max-height: min(85vh, 100%);
+	margin: auto;
+	padding: 0;
+	border: none;
+	border-radius: var(--wp--custom--border--radius);
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+
+	&::backdrop {
+		background-color: rgb(0 0 0 / 55%);
+	}
+
+	&[open] {
+		animation: nestcoworking-checkout-button-in 0.2s ease-out;
+	}
+}
+
+.wp-block-nestcoworking-checkout-button__content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--2-xs);
+	padding: var(--wp--preset--spacing--small);
+
+	label {
+		font-weight: 700;
+	}
+
+	input[type="date"] {
+		padding: var(--wp--preset--spacing--2-xs);
+		border: 1px solid var(--wp--preset--color--light-gray);
+		border-radius: var(--wp--custom--border--radius);
+	}
+}
+
+.wp-block-nestcoworking-checkout-button__error {
+	color: var(--wp--preset--color--secondary);
+	font-size: var(--wp--preset--font-size--small);
+	margin: 0;
+}
+
+.wp-block-nestcoworking-checkout-button__close {
+	position: absolute;
+	top: var(--wp--preset--spacing--2-xs);
+	right: var(--wp--preset--spacing--2-xs);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	color: var(--wp--preset--color--contrast);
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--wp--preset--color--light-gray);
+	}
+}
+
+@keyframes nestcoworking-checkout-button-in {
+	from {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-nestcoworking-checkout-button__dialog[open] {
+		animation: none;
+	}
+}
