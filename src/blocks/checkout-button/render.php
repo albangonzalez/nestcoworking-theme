@@ -11,6 +11,7 @@ $plan_id             = ! empty( $attributes['planId'] ) ? $attributes['planId'] 
 $button_text         = ! empty( $attributes['buttonText'] ) ? $attributes['buttonText'] : __( 'Comprar en línea', 'nestcoworking' );
 $requires_start_date = ! empty( $attributes['requiresStartDate'] );
 $min_start_date      = wp_date( 'Y-m-d', strtotime( 'tomorrow' ) );
+$button_class        = trim( 'wp-block-button ' . ( $attributes['className'] ?? '' ) );
 
 $context = array(
 	'planId'            => $plan_id,
@@ -31,7 +32,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 <div <?php echo $wrapper_attributes; ?> <?php echo wp_interactivity_data_wp_context( $context ); ?>>
 	<?php if ( $requires_start_date ) : ?>
 		<div class="wp-block-buttons">
-			<div class="wp-block-button">
+			<div class="<?php echo esc_attr( $button_class ); ?>">
 				<button
 					type="button"
 					class="wp-block-button__link wp-element-button"
@@ -86,7 +87,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 		</dialog>
 	<?php else : ?>
 		<div class="wp-block-buttons">
-			<div class="wp-block-button">
+			<div class="<?php echo esc_attr( $button_class ); ?>">
 				<button
 					type="button"
 					class="wp-block-button__link wp-element-button"
