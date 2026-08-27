@@ -204,4 +204,5 @@
 <!-- wp:nestcoworking/checkout-button {"planId":"month-pass","buttonText":"Comprar en linea","requiresStartDate":true,"className":"is-style-outline"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
