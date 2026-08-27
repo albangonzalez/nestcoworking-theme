@@ -19,12 +19,14 @@ function nestcoworking_mp_catalog() {
 			'unit_price'          => 1400,
 			'currency_id'         => 'MXN',
 			'requires_start_date' => true,
+			'duration_days'       => 7,
 		),
 		'month-pass' => array(
 			'title'               => 'Coworking: Month Pass',
 			'unit_price'          => 3500,
 			'currency_id'         => 'MXN',
 			'requires_start_date' => true,
+			'duration_days'       => 30,
 		),
 	);
 
@@ -112,7 +114,7 @@ function nestcoworking_mp_create_preference( WP_REST_Request $request ) {
 		$is_valid_date = $start_at
 			&& preg_match( '/^\d{4}-\d{2}-\d{2}$/', $start_at )
 			&& false !== strtotime( $start_at )
-			&& $start_at >= $today;
+			&& $start_at > $today;
 
 		if ( ! $is_valid_date ) {
 			return new WP_Error(
@@ -123,10 +125,22 @@ function nestcoworking_mp_create_preference( WP_REST_Request $request ) {
 		}
 	}
 
+	$item_title = $plan['title'];
+
+	if ( $plan['requires_start_date'] ) {
+		$end_at = gmdate( 'Y-m-d', strtotime( $start_at . ' +' . $plan['duration_days'] . ' days' ) );
+
+		$item_title .= sprintf(
+			' (from %s to %s)',
+			gmdate( 'j M Y', strtotime( $start_at ) ),
+			gmdate( 'j M Y', strtotime( $end_at ) )
+		);
+	}
+
 	$body = array(
 		'items'      => array(
 			array(
-				'title'       => $plan['title'],
+				'title'       => $item_title,
 				'quantity'    => 1,
 				'currency_id' => $plan['currency_id'],
 				'unit_price'  => $plan['unit_price'],
@@ -149,6 +163,7 @@ function nestcoworking_mp_create_preference( WP_REST_Request $request ) {
 		$body['metadata'] = array(
 			'plan_id'  => $plan_id,
 			'start_at' => $start_at,
+			'end_at'   => $end_at,
 		);
 	}
 

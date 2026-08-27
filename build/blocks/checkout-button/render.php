@@ -10,6 +10,7 @@
 $plan_id             = ! empty( $attributes['planId'] ) ? $attributes['planId'] : '';
 $button_text         = ! empty( $attributes['buttonText'] ) ? $attributes['buttonText'] : __( 'Comprar en línea', 'nestcoworking' );
 $requires_start_date = ! empty( $attributes['requiresStartDate'] );
+$min_start_date      = wp_date( 'Y-m-d', strtotime( 'tomorrow' ) );
 
 $context = array(
 	'planId'            => $plan_id,
@@ -54,12 +55,19 @@ $wrapper_attributes = get_block_wrapper_attributes(
 				data-wp-on--click="actions.close"
 			>&times;</button>
 			<div class="wp-block-nestcoworking-checkout-button__content">
+				<h3 class="wp-block-nestcoworking-checkout-button__title">
+					<?php esc_html_e( '¡Ya casi! Elige tu fecha de inicio', 'nestcoworking' ); ?>
+				</h3>
+				<p class="wp-block-nestcoworking-checkout-button__hint">
+					<?php esc_html_e( 'Indícanos el día en que quieres comenzar tu plan. Tu acceso estará activo desde las 8:00 am de esa fecha.', 'nestcoworking' ); ?>
+				</p>
 				<label for="mp-start-date-<?php echo esc_attr( $plan_id ); ?>">
 					<?php esc_html_e( 'Fecha de inicio', 'nestcoworking' ); ?>
 				</label>
 				<input
 					type="date"
 					id="mp-start-date-<?php echo esc_attr( $plan_id ); ?>"
+					min="<?php echo esc_attr( $min_start_date ); ?>"
 					data-wp-bind--value="context.startAt"
 					data-wp-on--input="actions.setStartAt"
 				/>

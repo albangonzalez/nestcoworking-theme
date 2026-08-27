@@ -20,9 +20,19 @@ store( 'nestcoworking/checkout-button', {
 		async checkout() {
 			const context = getContext();
 
-			if ( context.requiresStartDate && ! context.startAt ) {
-				context.error = 'Elige una fecha de inicio antes de continuar.';
-				return;
+			if ( context.requiresStartDate ) {
+				if ( ! context.startAt ) {
+					context.error = 'Elige una fecha de inicio antes de continuar.';
+					return;
+				}
+
+				const today = new Date();
+				today.setHours( 0, 0, 0, 0 );
+
+				if ( new Date( `${ context.startAt }T00:00:00` ) <= today ) {
+					context.error = 'La fecha de inicio no puede ser hoy ni una fecha pasada.';
+					return;
+				}
 			}
 
 			context.error = '';
