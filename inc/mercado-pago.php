@@ -35,7 +35,7 @@ function nestcoworking_mp_catalog() {
 
 function nestcoworking_mp_get_settings() {
 	return wp_parse_args(
-		get_option( 'nestcoworking_mp_settings', array() ),
+		get_option( 'mercadopago_settings', array() ),
 		array(
 			'access_token'     => '',
 			'success_url'      => home_url( '/?mp_status=success' ),
@@ -48,7 +48,7 @@ function nestcoworking_mp_get_settings() {
 
 function nestcoworking_mp_seed_settings_option() {
 	add_option(
-		'nestcoworking_mp_settings',
+		'mercadopago_settings',
 		array(
 			'access_token' => '',
 			'success_url'  => '',
