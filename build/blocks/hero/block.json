@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "nestcoworking/hero",
+  "title": "Hero",
+  "category": "theme",
+  "icon": "cover-image",
+  "description": "Page header showing the post title, using the featured image as a background when the post has one.",
+  "textdomain": "nestcoworking",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

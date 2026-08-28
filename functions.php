@@ -9,6 +9,7 @@ add_action( 'wp_enqueue_scripts', 'nestcoworking_enqueue_styles' );
 function nestcoworking_register_blocks() {
 	register_block_type( __DIR__ . '/build/blocks/modal' );
 	register_block_type( __DIR__ . '/build/blocks/checkout-button' );
+	register_block_type( __DIR__ . '/build/blocks/hero' );
 }
 
 add_action( 'init', 'nestcoworking_register_blocks' );

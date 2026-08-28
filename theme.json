@@ -71,6 +71,11 @@
 					"slug": "gradient-2",
 					"gradient": "radial-gradient(ellipse at center, var(--wp--preset--color--primary-light) 0%, var(--wp--preset--color--primary) 100%)",
 					"name": "Primary Radial"
+				},
+				{
+					"slug": "gradient-3",
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%)",
+					"name": "Primary to Secondary Linear"
 				}
 			]
 		},
