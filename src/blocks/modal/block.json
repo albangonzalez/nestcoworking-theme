@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "nestcoworking/modal",
 	"title": "Modal",
-	"category": "nestcoworking",
+	"category": "theme",
 	"icon": "external",
 	"description": "A button that opens its inner content in a native modal dialog.",
 	"keywords": [ "dialog", "popup", "lightbox" ],

@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "nestcoworking/checkout-button",
   "title": "Mercado Pago Checkout Button",
-  "category": "nestcoworking",
+  "category": "theme",
   "icon": "cart",
   "description": "A button that creates a Mercado Pago payment preference and redirects to Checkout Pro, optionally asking for a start date first.",
   "keywords": [
