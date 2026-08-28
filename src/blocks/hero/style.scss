@@ -1,0 +1,28 @@
+div.wp-block-nestcoworking-hero {
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	align-items: flex-end;
+	min-height: 600px;
+	padding: var(--wp--preset--spacing--small);
+	border-radius: var(--wp--custom--border--radius);
+	background-size: cover;
+	background-position: center;
+	color: var(--wp--preset--color--base);
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 60%);
+		pointer-events: none;
+	}
+
+	& > h1 {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		color: var(--wp--preset--color--base);
+	}
+}
