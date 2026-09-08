@@ -7,12 +7,14 @@ function nestcoworking_mp_catalog() {
 			'unit_price'          => 200,
 			'currency_id'         => 'MXN',
 			'requires_start_date' => false,
+			'service_offer_id'    => 2,
 		),
 		'day-pass'   => array(
 			'title'               => 'Coworking: Day Pass',
 			'unit_price'          => 300,
 			'currency_id'         => 'MXN',
 			'requires_start_date' => false,
+			'service_offer_id'    => 3,
 		),
 		'week-pass'  => array(
 			'title'               => 'Coworking: Week Pass',
@@ -20,6 +22,7 @@ function nestcoworking_mp_catalog() {
 			'currency_id'         => 'MXN',
 			'requires_start_date' => true,
 			'duration_days'       => 7,
+			'service_offer_id'    => 4,
 		),
 		'month-pass' => array(
 			'title'               => 'Coworking: Month Pass',
@@ -27,6 +30,7 @@ function nestcoworking_mp_catalog() {
 			'currency_id'         => 'MXN',
 			'requires_start_date' => true,
 			'duration_days'       => 30,
+			'service_offer_id'    => 1,
 		),
 	);
 
@@ -193,12 +197,12 @@ function nestcoworking_mp_create_preference( WP_REST_Request $request ) {
 		$body['auto_return'] = 'approved';
 	}
 
+	$body['metadata'] = array(
+		'service_offer_id' => $plan['service_offer_id'],
+	);
+
 	if ( $plan['requires_start_date'] ) {
-		$body['metadata'] = array(
-			'plan_id'  => $plan_id,
-			'start_at' => $start_at,
-			'end_at'   => $end_at,
-		);
+		$body['metadata']['start_date'] = $start_at;
 	}
 
 	$response = wp_remote_post(
