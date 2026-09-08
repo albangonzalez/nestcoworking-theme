@@ -38,10 +38,11 @@ function nestcoworking_mp_get_settings() {
 		get_option( 'mercadopago_settings', array() ),
 		array(
 			'access_token'     => '',
-			'success_url'      => home_url( '/?mp_status=success' ),
-			'failure_url'      => home_url( '/?mp_status=failure' ),
-			'pending_url'      => home_url( '/?mp_status=pending' ),
-			'notification_url' => 'https://sys.nestcoworking.com.mx/webhook.php',
+			'success_url'      => home_url( '/subscribe' ),
+			'failure_url'      => home_url( '/subscribe' ),
+			'pending_url'      => home_url( '/subscribe' ),
+			'notification_url' => 'https://sys.nestcoworking.com.mx/api/v1/webhooks/mercadopago',
+			'status_api_base'  => 'https://sys.nestcoworking.com.mx/api/v1/payments',
 		)
 	);
 }
@@ -51,9 +52,6 @@ function nestcoworking_mp_seed_settings_option() {
 		'mercadopago_settings',
 		array(
 			'access_token' => '',
-			'success_url'  => '',
-			'failure_url'  => '',
-			'pending_url'  => '',
 		)
 	);
 }
@@ -81,8 +79,44 @@ function nestcoworking_mp_register_routes() {
 			),
 		)
 	);
+
+	register_rest_route(
+		'nestcoworking/v1',
+		'/payment-status/(?P<payment_id>[\w.-]+)',
+		array(
+			'methods'             => 'GET',
+			'callback'            => 'nestcoworking_mp_get_payment_status',
+			'permission_callback' => '__return_true',
+		)
+	);
 }
 add_action( 'rest_api_init', 'nestcoworking_mp_register_routes' );
+
+/**
+ * Proxies the NestSys payment status lookup so the browser never calls
+ * sys.nestcoworking.com.mx directly (that endpoint has no auth yet).
+ */
+function nestcoworking_mp_get_payment_status( WP_REST_Request $request ) {
+	$settings   = nestcoworking_mp_get_settings();
+	$payment_id = $request->get_param( 'payment_id' );
+
+	$response = wp_remote_get(
+		trailingslashit( $settings['status_api_base'] ) . rawurlencode( $payment_id ),
+		array( 'timeout' => 10 )
+	);
+
+	if ( is_wp_error( $response ) ) {
+		return rest_ensure_response( array( 'status' => 'pending' ) );
+	}
+
+	$data = json_decode( wp_remote_retrieve_body( $response ), true );
+
+	if ( ! is_array( $data ) || empty( $data['status'] ) ) {
+		return rest_ensure_response( array( 'status' => 'pending' ) );
+	}
+
+	return rest_ensure_response( $data );
+}
 
 function nestcoworking_mp_create_preference( WP_REST_Request $request ) {
 	$settings = nestcoworking_mp_get_settings();

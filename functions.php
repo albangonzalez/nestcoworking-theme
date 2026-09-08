@@ -4,6 +4,7 @@ function nestcoworking_register_blocks() {
 	register_block_type( __DIR__ . '/build/blocks/modal' );
 	register_block_type( __DIR__ . '/build/blocks/checkout-button' );
 	register_block_type( __DIR__ . '/build/blocks/hero' );
+	register_block_type( __DIR__ . '/build/blocks/payment-status' );
 }
 
 function nestcoworking_enqueue_styles() {

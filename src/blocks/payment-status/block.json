@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nestcoworking/payment-status",
+	"title": "Mercado Pago Payment Status",
+	"category": "theme",
+	"icon": "yes-alt",
+	"description": "Muestra el estado de un pago de Mercado Pago (payment_id en la URL) y las credenciales de acceso una vez procesado, sondeando al backend de NestSys.",
+	"keywords": [ "mercado pago", "payment", "status", "credentials" ],
+	"textdomain": "nestcoworking",
+	"attributes": {
+		"pollIntervalMs": {
+			"type": "number",
+			"default": 3000
+		},
+		"maxAttempts": {
+			"type": "number",
+			"default": 15
+		}
+	},
+	"supports": {
+		"interactivity": true,
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}
