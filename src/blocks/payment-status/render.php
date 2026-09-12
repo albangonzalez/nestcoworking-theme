@@ -66,7 +66,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 				</p>
 				<p>
 					<?php esc_html_e( 'Vigencia:', 'nestcoworking' ); ?>
-					<span data-wp-text="context.item.start_date"></span> – <span data-wp-text="context.item.expiration_date"></span>
+					<span data-wp-text="context.item.start_date"></span> – <span data-wp-text="context.item.end_date"></span>
 				</p>
 			</div>
 		</template>
