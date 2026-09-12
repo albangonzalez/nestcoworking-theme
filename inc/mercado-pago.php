@@ -21,7 +21,7 @@ function nestcoworking_mp_catalog() {
 			'unit_price'          => 1400,
 			'currency_id'         => 'MXN',
 			'requires_start_date' => true,
-			'duration_days'       => 7,
+			'duration_unit'       => 'week',
 			'service_offer_id'    => 4,
 		),
 		'month-pass' => array(
@@ -29,7 +29,7 @@ function nestcoworking_mp_catalog() {
 			'unit_price'          => 3500,
 			'currency_id'         => 'MXN',
 			'requires_start_date' => true,
-			'duration_days'       => 30,
+			'duration_unit'       => 'month',
 			'service_offer_id'    => 1,
 		),
 	);
@@ -166,7 +166,8 @@ function nestcoworking_mp_create_preference( WP_REST_Request $request ) {
 	$item_title = $plan['title'];
 
 	if ( $plan['requires_start_date'] ) {
-		$end_at = gmdate( 'Y-m-d', strtotime( $start_at . ' +' . $plan['duration_days'] . ' days' ) );
+		// Mirrors NestSys's InternetCode::getExpirationDateAttribute() ('W'/'M' cases): start + 1 unit - 1 day.
+		$end_at = gmdate( 'Y-m-d', strtotime( $start_at . ' +1 ' . $plan['duration_unit'] . ' -1 day' ) );
 
 		$item_title .= sprintf(
 			' (from %s to %s)',
