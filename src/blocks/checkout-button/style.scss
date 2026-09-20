@@ -7,6 +7,19 @@
 	.wp-block-button__link {
 		width: 100%;
 	}
+
+	.wp-block-button.is-style-outline .wp-block-button__link {
+		background: transparent none;
+		background-color: transparent;
+		border-color: var(--wp--preset--color--base);
+		border-width: 1px;
+		border-style: solid;
+		color: var(--wp--preset--color--base);
+		padding-top: var(--wp--preset--spacing--2-xs);
+		padding-right: var(--wp--preset--spacing--small);
+		padding-bottom: var(--wp--preset--spacing--2-xs);
+		padding-left: var(--wp--preset--spacing--small);
+	}
 }
 
 .wp-block-nestcoworking-checkout-button__dialog {
